@@ -1,0 +1,134 @@
+.select2-container{
+    width: 100% !important;
+}
+
+
+.mb-25{
+    margin-top:25px !important;
+}
+
+.page-ticket-show{
+    background:#2051ab30 !important;
+}
+.ticket-show-support{
+    flex-direction: row-reverse;
+}
+.ticket-show-user{
+    flex-direction: row;
+}
+
+.ticket-show li{
+    border-bottom: unset !important;
+}
+
+
+.ticket-show li >div:nth-child(1) {
+    display: flex; 
+    max-width:80%; 
+    align-items: center;
+    background: #edf2fa; 
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.ticket-show-support >div:nth-child(1) {
+    flex-direction: row-reverse;
+}
+
+.ticket-show .media-body{
+    min-width: 200px !important;
+}
+
+.media-ticket-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.input-number{
+    width: 55px;
+    height:35px;
+}
+
+.bg-transparent{
+    background-color: transparent !important;
+}
+
+.column_order{
+    font-weight: 600; 
+    font-size: 15px; 
+    color: #34395e;
+}
+
+.showDate{
+    direction:ltr !important;
+}
+
+
+.order_table tbody tr:nth-of-type(odd) {
+    background-color:transparent;
+}
+
+.order_table tbody tr:nth-of-type(odd) {
+    background-color: transparent;
+}
+
+.order_table tbody th{
+    border: 1px solid #ddd;
+}
+.order_table tbody tr{
+    border: 1px solid #ddd;
+}
+.order_table tbody td{
+    border: 1px solid #ddd;
+}
+.printPage{
+    text-align: left;
+}
+
+
+.pretty {
+    display:block !important;
+    margin:20px 0 !important;
+}
+
+.filter_cat ul li a{
+    padding-right: 0px;
+    font-size: 16px;
+    color: #000;
+    font-weight: 600;
+}
+.dropdown-filter-1,.dropdown-filter-2 {
+    list-style: none !important;
+    padding-right:15px;
+}
+
+.dropdown-filter-1 li a{
+    color: #495062 !important;
+    font-size: 15px !important;
+    font-weight:500 !important;
+}
+
+.dropdown-filter-2 li a{
+    color: #495062 !important;
+    font-size: 14px !important;
+    font-weight:400 !important;
+}
+
+
+a:hover {
+    text-decoration: auto !important;
+}
+
+
+.div-clone{
+    border: 1px solid #eee; 
+    padding: 15px;
+    border-radius: 15px !important; 
+    margin: 10px; 
+    background: #3abaf40d;
+}

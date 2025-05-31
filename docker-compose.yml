@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+    db:
+        image: postgres:15
+        container_name: postgres_db
+        restart: always
+        environment:
+            POSTGRES_USER: myuser
+            POSTGRES_PASSWORD: mypassword
+            POSTGRES_DB: mydatabase
+        volumes:
+            - pgdata:/var/lib/postgresql/data
+        ports:
+            - "5433:5432"   # Host 5433 → Container 5432
+
+    pgadmin:
+        image: dpage/pgadmin4:latest
+        container_name: pgadmin
+        restart: always
+        environment:
+            PGADMIN_DEFAULT_EMAIL: admin@example.com
+            PGADMIN_DEFAULT_PASSWORD: admin123
+        ports:
+            - "8081:80"     # Host 8081 → Container 80
+        volumes:
+            - pgadmin_data:/var/lib/pgadmin
+        depends_on:
+            - db
+
+volumes:
+    pgdata:
+    pgadmin_data:

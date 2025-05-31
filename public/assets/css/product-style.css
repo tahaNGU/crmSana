@@ -1,0 +1,178 @@
+.filter-btn {
+  display: none;
+}
+.sidebar {
+  display: block;
+  height: 100%;
+  right: 0;
+  top: 0;
+
+  overflow: auto;
+}
+.sidebarMobile {
+  display: none;
+}
+.thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover; /* Space between thumbnails in RTL */
+}
+.gallery-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: #ddd; /* Background color for +N */
+}
+@media screen and (max-width: 1100px) {
+  .mobile-filter .pretty{
+    display: block;
+    margin: 20px 0;
+  }
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: none; /* Initially hidden */
+    z-index: 999; /* Make sure it's above other content */
+  }
+  .card .card-body {
+    padding: 12px;
+  }
+  .filter-btn {
+    display: block;
+  }
+  .swiper-title {
+    font-size: 12px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebarMobile {
+    display: none;
+    position: sticky;
+    z-index: 1000;
+    padding: 1rem;
+    background: white;
+    top: 0;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+  }
+  .showFilter {
+    right: 0;
+    display: block;
+  }
+  .show {
+    display: block;
+    /* Show overlay when sidebar is open */
+  }
+}
+
+#sidebar-wrapper {
+  position: relative;
+  right: 0px;
+  transition: right 1s ease-in-out;
+}
+.hidden {
+  position: relative !important;
+  right: -300px !important;
+  transition: right 1s ease-in-out !important;
+}
+.swiper-container {
+  overflow: hidden;
+}
+swiper-container {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+}
+
+swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  width: fit-content !important;
+}
+
+
+swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+#lightbox img,
+#lightbox video {
+  max-width: 90%;
+  max-height: 90%;
+}
+.z-top {
+  z-index: 10;
+  top: 0;
+  right: 1px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin: 0 !important;
+  color: #fff;
+}
+.add-to-cart {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+#counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #6777ef;
+  border-radius: 6px;
+}
+#counter div {
+  width: 21px;
+  height: 21px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+#counter #current {
+  padding: 0.3rem 0.8rem;
+}
+#counter #prev {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+#counter #next {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
