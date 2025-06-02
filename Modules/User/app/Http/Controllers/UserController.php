@@ -9,10 +9,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Testing\Fluent\Concerns\Has;
 use Modules\User\Http\Requests\LoginRequest;
+use Modules\User\Services\UserService;
 
 class UserController extends Controller
 {
-    public function __construct()
+    public function __construct(
+        private UserService $userService
+    )
     {
     }
 
@@ -23,10 +26,10 @@ class UserController extends Controller
 
     public function login(LoginRequest $request){
         $data=$request->validated();
-        $user=User::where(["email"=>$data["email"]])->first();
-        if($user && Hash::check($data["password"],$user["password"])){
+        $user=$this->userService->findUser(where:['email'=>$data["email"]]);
+        if($this->userService->loginCheck($user,$data)){
             Auth::attempt($data);
-            return redirect()->route('base');
+            return redirect()->route('task.index');
         }
         return back()->with("message","Email Or Password Is Wrong");
     }

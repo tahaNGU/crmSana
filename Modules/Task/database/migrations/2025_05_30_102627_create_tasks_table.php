@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string("title");
             $table->string("note");
             $table->string("file")->nullable();
-            $table->enum("status",["todo","in_progress","done"]);
+            $table->enum("status",["todo","in_progress","done"])->default("todo");
             $table->timestamp("started_at")->nullable();
             $table->timestamp("finished_at")->nullable();
+            $table->softDeletes();
             $table->timestamps();
         });
     }

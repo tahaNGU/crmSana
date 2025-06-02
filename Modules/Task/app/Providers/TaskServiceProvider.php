@@ -4,6 +4,8 @@ namespace Modules\Task\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Modules\Task\Repositories\Category\CategoryEloquentInterface;
+use Modules\Task\Repositories\Category\CategoryEloquentRepository;
 use Modules\Task\Repositories\Task\TaskEloquentInterface;
 use Modules\Task\Repositories\Task\TaskEloquentRepository;
 use Nwidart\Modules\Traits\PathNamespace;
@@ -40,6 +42,7 @@ class TaskServiceProvider extends ServiceProvider
         $this->app->register(RouteServiceProvider::class);
 
         $this->app->bind(TaskEloquentInterface::class,TaskEloquentRepository::class);
+        $this->app->bind(CategoryEloquentInterface::class,CategoryEloquentRepository::class);
     }
 
     /**

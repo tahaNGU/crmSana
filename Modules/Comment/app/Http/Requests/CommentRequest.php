@@ -1,10 +1,10 @@
 <?php
 
-namespace Modules\Task\Http\Requests;
+namespace Modules\Comment\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TaskRequest extends FormRequest
+class CommentRequest extends FormRequest
 {
     /**
      * Get the validation rules that apply to the request.
@@ -12,7 +12,8 @@ class TaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-
+            'note' => 'nullable|string',
+            'file'=>['nullable','mimes:pdf,jpg,jpeg,png,webp,gif','max:2048'],
         ];
     }
 

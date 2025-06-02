@@ -9,4 +9,5 @@ interface TaskEloquentInterface
     public function getWhere(array $where):array;
     public function findWhere(array $where):array;
     public function deleteWhere(array $where):bool;
+    public function calculateStatusPercentages(array $where):array;
 }

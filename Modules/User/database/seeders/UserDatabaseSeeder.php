@@ -18,5 +18,12 @@ class UserDatabaseSeeder extends Seeder
             "password" => "neverGiveUp",
             "is_admin" => true
         ]);
+        for ($i=1;$i<=5;$i++){
+            User::create([
+                "name"=>fake()->name,
+                'email'=>fake()->email,
+                'password'=>"123456"
+            ]);
+        }
     }
 }

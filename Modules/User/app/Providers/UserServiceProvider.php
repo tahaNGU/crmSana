@@ -4,6 +4,8 @@ namespace Modules\User\Providers;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Modules\User\Repositories\User\UserEloquentInterface;
+use Modules\User\Repositories\User\UserEloquentRepository;
 use Nwidart\Modules\Traits\PathNamespace;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -36,6 +38,8 @@ class UserServiceProvider extends ServiceProvider
     {
         $this->app->register(EventServiceProvider::class);
         $this->app->register(RouteServiceProvider::class);
+        $this->app->bind(UserEloquentInterface::class,UserEloquentRepository::class);
+
     }
 
     /**

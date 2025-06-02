@@ -11,9 +11,6 @@
         </div>
     </div>
     <ul class="sidebar-menu">
-        <li class="dropdown">
-            <a  href=""href="{{route("base")}}" class="nav-link"><i class="fas fa-cog"></i><span>Dashboard</span></a>
-        </li>
 {{--        @if(userCan(\Modules\Permission\Entities\Enums\PermissionName::SETTING_INDEX))--}}
 {{--            <li class="dropdown">--}}
 {{--                <a  href=""href="{{route("settings.index")}}" class="nav-link"><i class="fas fa-cog"></i><span>تنظیمات</span></a>--}}
@@ -93,7 +90,7 @@
 {{--        @if(userCan(\Modules\Permission\Entities\Enums\PermissionName::PRODUCT_CATEGORY_STORE) || userCan(\Modules\Permission\Entities\Enums\PermissionName::PRODUCT_CATEGORY_INDEX))--}}
             <li class="dropdown">
                 <a class="nav-link has-dropdown pointer"><i class="fas fa-layer-group"></i><span>Tasks</span></a>
-                <ul class="dropdown-menu {{str_contains(Route::currentRouteName(),'task') ? 'd-block' : '' }}">
+                <ul class="dropdown-menu">
 {{--                    @if(userCan(\Modules\Permission\Entities\Enums\PermissionName::PRODUCT_CATEGORY_STORE))--}}
                         <li >
                             <a  href="{{route("task.create")}}" class="nav-link">New Task</a>
